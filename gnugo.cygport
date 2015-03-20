@@ -1,11 +1,14 @@
 NAME="gnugo"
 VERSION=3.8
-RELEASE=2
+RELEASE=3
 CATEGORY="Games"
-SUMMARY="Go game for console/server"
+SUMMARY="Go game with text interface"
 DESCRIPTION="GNU Go is a free program that plays the game of Go. GNU Go has
 played thousands of games on the NNGS Go server. GNU Go is now also playing
 regularly on the Legend Go Server in Taiwan, on the WING server in Japan,
 and many volunteers run GNU Go clients on KGS."
 HOMEPAGE="http://www.gnu.org/software/gnugo/";
 SRC_URI="mirror://gnu/gnugo/gnugo-${VERSION}.tar.gz"
+PATCH_URI="http://pkgs.fedoraproject.org/cgit/gnugo.git/plain/gnugo-3.8-format-security.patch"
+
+CYGCONF_ARGS="--enable-color --with-readline"
